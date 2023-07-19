@@ -11,10 +11,9 @@ export const mutations = {
 export const actions = {
   async login({ commit }, usuario) {
     // Lógica de autenticación (simulación de autenticación exitosa)
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    new Promise(resolve => setTimeout(resolve));
 
     // Establecer el usuario como autenticado
     commit('SET_USUARIO_AUTENTICADO', true);
   }
 };
-

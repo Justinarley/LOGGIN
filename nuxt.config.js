@@ -44,5 +44,6 @@ export default {
   },
   router: {
     middleware: ['auth']
-  }
+  },
+  modules: ['cookie-universal-nuxt']
 }

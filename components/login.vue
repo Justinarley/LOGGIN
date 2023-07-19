@@ -16,6 +16,32 @@
 </template>
 
 <script>
+// export default {
+//   data() {
+//     return {
+//       username: '',
+//       password: ''
+//     };
+//   },
+  
+//   methods: {
+//     login() {
+//       // Validación básica con datos quemados
+//       if (this.username === 'admin' && this.password === '123') {
+//         // Las credenciales son correctas, realizar la acción deseada (redirección, mostrar contenido, etc.)
+
+//         // En lugar de redirigir directamente aquí, llamaremos a la acción del store para establecer el usuario autenticado
+//         this.$store.dispatch('login', this.username);
+
+//         // Redirigir a una página protegida después del inicio de sesión exitoso
+//         this.$router.push('/Principal');
+//       } else {
+//         // Las credenciales son incorrectas, mostrar un mensaje de error
+//         alert('Credenciales incorrectas');
+//       }
+//     }
+//   }
+// };
 export default {
   data() {
     return {
@@ -25,13 +51,16 @@ export default {
   },
   
   methods: {
-    login() {
+    async login() {
       // Validación básica con datos quemados
       if (this.username === 'admin' && this.password === '123') {
         // Las credenciales son correctas, realizar la acción deseada (redirección, mostrar contenido, etc.)
 
-        // En lugar de redirigir directamente aquí, llamaremos a la acción del store para establecer el usuario autenticado
-        this.$store.dispatch('login', this.username);
+        // Almacenar el token de autenticación en una cookie
+        this.$cookies.set('authToken', 'AQUI_EL_TOKEN', {
+          path: '/', // Ajusta esto según la ruta donde deseas que sea accesible la cookie
+          maxAge: 60, // Tiempo de expiración en segundos (una semana en este ejemplo)
+        });
 
         // Redirigir a una página protegida después del inicio de sesión exitoso
         this.$router.push('/Principal');
