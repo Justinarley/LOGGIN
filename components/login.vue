@@ -23,6 +23,7 @@ export default {
       password: ''
     };
   },
+  
   methods: {
     login() {
       // Validación básica con datos quemados
@@ -66,7 +67,7 @@ export default {
   padding: 50px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #f5f5f5;
+  background-color: #41b89c;
 }
 
 .form-group {

@@ -17,3 +17,4 @@ export const actions = {
     commit('SET_USUARIO_AUTENTICADO', true);
   }
 };
+

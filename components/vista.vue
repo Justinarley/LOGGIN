@@ -1,19 +1,16 @@
 <template>
   <div>
     <a-layout>
-      <a-header style="background-color: #41b883; color: #fff; padding: 20px;">
-        <h1 style="margin: 0; text-align: center;">Panel de Administración</h1>
-        <a-menu mode="horizontal" theme="dark">
-          <a-menu-item><a href="#">Inicio</a></a-menu-item>
-          <a-menu-item><a href="#">Usuarios</a></a-menu-item>
-          <a-menu-item><a href="#">Configuración</a></a-menu-item>
-          <a-menu-item><a href="#">Cerrar sesión</a></a-menu-item>
-        </a-menu>
+      <a-header class="header">
+        <h1 class="title">Panel de Administración</h1>
       </a-header>
-      <br>
-      <br><br>
-
-      <a-content style="padding: 20px;">
+      <a-menu mode="horizontal" theme="dark" style="font-size: 20px;">
+          <a-menu-item @click="ini">Inicio</a-menu-item>
+          <a-menu-item @click="user">Usuarios</a-menu-item>
+          <a-menu-item @click="config">Configuración</a-menu-item>
+          <a-menu-item @click="log">Cerrar sesión</a-menu-item>
+        </a-menu>
+      <a-content style="padding: 30px;">
         <h2>Bienvenido al Panel de Administración</h2>
         
         <img src="/images/fond.jpg" alt="">
@@ -27,7 +24,7 @@
 </template>
 
 <script>
-import { Layout, Menu, Image } from 'ant-design-vue';
+import { Layout, Menu, } from 'ant-design-vue';
 
 export default {
   components: {
@@ -37,6 +34,20 @@ export default {
     'a-footer': Layout.Footer,
     'a-menu': Menu,
     'a-menu-item': Menu.Item,
+  },
+  methods: {
+    ini() {
+      this.$router.push('/Principal');
+    },
+    user() {
+      this.$router.push('/Usuario');
+    },
+    config() {
+      this.$router.push('/');
+    },
+    log() {
+      this.$router.push('/login');
+    },
   },
 };
 </script>
@@ -57,6 +68,20 @@ img{
 h2 {
   color: #333;
   margin-bottom: 20px;
+}
+.header {
+  background-color: #41b883;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+  color: beige;
 }
 </style>
 

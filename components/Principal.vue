@@ -1,6 +1,17 @@
 <template>
 
   <div class="fondi">
+    <div>
+      <a-header class="header">
+        <h1 class="title">Panel de Administración</h1>
+      </a-header>
+      <a-menu mode="horizontal" theme="dark" style="font-size: 20px;">
+          <a-menu-item @click="ini">Inicio</a-menu-item>
+          <a-menu-item @click="user">Usuarios</a-menu-item>
+          <a-menu-item @click="config">Configuración</a-menu-item>
+          <a-menu-item @click="log">Cerrar sesión</a-menu-item>
+        </a-menu>
+    </div>
     <div class="welcome-container">
         <h1>Bienvenido!</h1>
           <p>
@@ -21,30 +32,63 @@
 
 <script>
 import { Button } from 'ant-design-vue';
+import { Menu,Layout } from 'ant-design-vue';
 
 export default {
   components: {
     'a-button': Button,
+    'a-header': Layout.Header,
+    'a-menu': Menu,
+    'a-menu-item': Menu.Item,
   },
   data() {
     return {
       username: 'admin',
-      password: '123', // Puedes obtener la contraseña desde el inicio de sesión si lo necesitas
+      password: '123',
     };
   },
   methods: {
     logout() {
-      // Aquí puedes realizar la lógica para cerrar la sesión, por ejemplo, redireccionar al formulario de inicio de sesión
+      // redireccionar al formulario de inicio de sesión
       this.$router.push('/login');
     },
     vista() {
       this.$router.push('/Vista');
+    },
+    reg() {
+      this.$router.push('/vista');
+    },
+    ini() {
+      this.$router.push('/Principal');
+    },
+    user() {
+      this.$router.push('/Usuario');
+    },
+    config() {
+      this.$router.push('/');
+    },
+    log() {
+      this.$router.push('/login');
     },
   },
 };
 </script>
 
 <style scoped>
+.header {
+  background-color: #41b883;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 40px;
+  color: beige;
+}
 .fondi {
   background-color: #41b89c;
 }
@@ -62,13 +106,6 @@ img{
   height: 20%;
   margin-left: 175px;
 }
-
-h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
-  color: beige;
-}
-
 p {
   font-size: 16px;
 }
