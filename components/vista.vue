@@ -43,7 +43,7 @@ export default {
       this.$router.push('/Usuario');
     },
     config() {
-      this.$router.push('/');
+      this.$router.push('/config');
     },
     log() {
       this.$router.push('/login');
@@ -70,8 +70,7 @@ h2 {
   margin-bottom: 20px;
 }
 .header {
-  background-color: #41b883;
-  color: #fff;
+  background-color: #e4e4e4;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -81,7 +80,7 @@ h2 {
 .title {
   margin: 0;
   font-size: 40px;
-  color: beige;
+  color: #41b883;
 }
 </style>
 

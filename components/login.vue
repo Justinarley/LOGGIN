@@ -67,7 +67,7 @@ export default {
   padding: 50px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #41b89c;
+  background-color: #e4e4e4;
 }
 
 .form-group {

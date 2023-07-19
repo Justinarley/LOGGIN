@@ -82,7 +82,7 @@ export default defineComponent({
       this.$router.push('/Usuario');
     },
     config() {
-      this.$router.push('/');
+      this.$router.push('/config');
     },
     log() {
       this.$router.push('/login');
@@ -98,7 +98,7 @@ export default defineComponent({
 }
 
 .fond {
-  background-color: #0e848d;
+  background-color: #e4e4e4;
 }
 
 .container {
@@ -124,7 +124,7 @@ export default defineComponent({
 }
 
 .user-card .ant-card-head {
-  background-color: #41b883;
+  background-color: #38ecf6;
   color: #fff;
   text-align: center;
   border-radius: 8px 8px 0 0;
@@ -143,8 +143,7 @@ export default defineComponent({
   margin-top: 20px;
 }
 .header {
-  background-color: #41b883;
-  color: #fff;
+  background-color: #e4e4e4;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -154,6 +153,6 @@ export default defineComponent({
 .title {
   margin: 0;
   font-size: 40px;
-  color: beige;
+  color: #41b883;
 }
 </style>

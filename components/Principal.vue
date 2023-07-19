@@ -65,7 +65,7 @@ export default {
       this.$router.push('/Usuario');
     },
     config() {
-      this.$router.push('/');
+      this.$router.push('/config');
     },
     log() {
       this.$router.push('/login');
@@ -76,8 +76,8 @@ export default {
 
 <style scoped>
 .header {
-  background-color: #41b883;
-  color: #fff;
+  background-color: #e4e4e4;
+  color:#41b883;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -87,16 +87,16 @@ export default {
 .title {
   margin: 0;
   font-size: 40px;
-  color: beige;
+  color: #41b883;
+  
 }
 .fondi {
-  background-color: #41b89c;
+  background-color: #e4e4e4;
 }
 .welcome-container {
   text-align: center;
-  margin-top: 50px;
-  
-  color: azure;
+  margin-top: 40px;
+  color: #41b883;
   font-size: 20px;
   padding: 20px;
 }
